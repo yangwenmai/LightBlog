@@ -12,7 +12,7 @@ necessary-package：如果不能使用npm进行安装，请下载这个分支内
 en（尚未创建）：所有英文版LightBlog文件
 
 ##安装方法
-（以下假定你已经安装了Node.js和npm并且环境变量设置正确，如果你没有配置npm，请到necessary-package分支下载需要的依赖文件并且解压到代码目录里）  
+（以下假定你已经安装了Node.js和npm并且环境变量设置正确，如果你没有配置npm，请到necessary-package分支下载带依赖文件的版本【不保证完全为最新版】，并直接跳到settings.js修改）  
 下载所有代码并解压到一个文件夹  
 打开Node.js command prompt，进入代码目录，执行  
 `npm install`  
