@@ -3,6 +3,8 @@ LightBlog
 项目构建状态：[![Build Status](https://travis-ci.org/sanddudu/LightBlog.png?branch=master)](https://travis-ci.org/sanddudu/LightBlog)  
 项目依赖状态：[![依赖模块状态](https://david-dm.org/sanddudu/LightBlog.png)](http://david-dm.org/sanddudu/LightBlog)
 
+Live Demo上线，地址：http://code5light.com:8888/
+
 ##什么是LightBlog
 LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法的轻量级博客系统
 
