@@ -1,0 +1,25 @@
+<br /><!- 如果您使用了多说，请使用多说代码覆盖本行以下所有代码，由于API的问题，在多说的回复暂时不能计数 ->
+<h5><%= post.comments.length %>条评论</h5>
+<% post.comments.forEach(function(comment, index){ %>
+<hr>
+<div style="padding-left:4em">
+  <p><img src="<%= comment.head %>" class="l_head" /><a href="<%= comment.website %>"><%= comment.name %></a>
+  <span class="info"> 回复于 <%= comment.time %></span></p>
+  <p><%- comment.content %></p>
+</div>
+<hr>
+<% }) %>
+<h4>评论</h4>
+<form method="post" style="line-height: normal;">
+<% if(locals.user){ %>
+  姓名：<input type="text" name="name" value="<%= locals.user.name %>" /><br />
+  邮箱：<input type="text" name="email" value="<%= locals.user.email %>" /><br />
+  网址：<input type="text" name="website" value="/u/<%= locals.user.name %>" /><br />
+<% } else { %>
+  姓名：<input type="text" name="name" /><br />
+  邮箱：<input type="text" name="email" /><br />
+  网址：<input type="text" name="website" value="http://" /><br />
+<% } %>
+  <textarea id="editor" name="content" placeholder="在此键入评论"></textarea><br>
+  <button class="btn btn-success" type="submit">评论</button>
+</form>
