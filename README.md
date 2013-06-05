@@ -6,7 +6,8 @@ LightBlog
 Live Demo上线，地址：http://code5light.com:8888/
 
 ##什么是LightBlog
-LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法的轻量级博客系统
+LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法的轻量级博客系统    
+源代码基于nswbmw的[N-Blog](https://github.com/nswbmw/N-blog)
 
 ##分支说明
 master：所有中文版LightBlog文件  
