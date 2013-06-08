@@ -1,12 +1,25 @@
 {
   "name": "lightBlog",
+  "description": "A light blog program support markdown",
   "version": "1.0.0",
-  "private": false,
+  "author": {
+    "name": "Klion Xu",
+    "email": "whitebox@projectc0de.org"
+  },
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/sanddudu/LightBlog.git"
+  },
+  "readme": "#LightBlog \n [![Build Status](https://travis-ci.org/sanddudu/LightBlog.png?branch=master)](https://travis-ci.org/sanddudu/LightBlog) \n [![依赖模块状态](https://david-dm.org/sanddudu/LightBlog.png)](http://david-dm.org/sanddudu/LightBlog)",
+  "readmeFilename": "Readme.md",
+  "bugs": {
+    "url": "https://github.com/sanddudu/LightBlog/issues"
+  },
   "dependencies": {
-    "express": "3.2.4",
+    "express": "3.2.6",
     "ejs": "*",
     "mongodb": "*",
     "connect-mongo": "*",

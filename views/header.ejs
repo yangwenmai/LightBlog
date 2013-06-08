@@ -12,11 +12,12 @@
 body{width:600px;margin:2em auto;padding:0 2em;font-size:14px;font-family:"Microsoft YaHei";}
 p{line-height:24px;margin:1em 0;}
 header{padding:.5em 0;}
-nav{float:left;font-family:"Microsoft YaHei";font-size:1.1em;text-transform:uppercase;margin-left:-12em;width:9em;text-align:right;}
+nav{float:left;font-family:"Microsoft YaHei";font-size:1.1em;text-transform:uppercase;margin-left:-12em;width:9em;text-align:right;padding-top: 50px;}
 nav a{display:block;text-decoration:none;padding:.7em 1em;color:#000000;}
 nav a:hover{background-color:#1589C9;color:#f9f9f9;-webkit-transition:color .2s linear;}
 article{font-size:16px;padding-top:.5em;}
-article a{color:#000000;text-decoration:none;}
+article h2 a{color:#000000;}
+article a{color:#1589C9;text-decoration:none;}
 article a:hover{color:#333333;text-decoration:underline;}
 .info{font-size:14px;}
 .lastpage a{float:left;text-decoration:none;padding:.5em 1em;color:#000000;font-weight:bold;}
@@ -30,15 +31,14 @@ article a:hover{color:#333333;text-decoration:underline;}
 .search{border:0;width:6em;text-align:center;font-size:1em;margin:0.5em 0;}
 .l_head{float:left;margin-left:-4em;box-shadow:0px 1px 4px #888;}
 .r_head{float:right;margin-top:-2.5em;box-shadow:0px 1px 4px #888;}
-.empty{height: 30px;}
+.footer{text-align: center;}
 </style>
 </head>
 <body>
 
-<p><h1><%= sitename %></h1><small><%= sitedescription %></small></p>
+<h1><%= sitename %></h1><small><%= sitedescription %></small>
 
 <nav>
-<div class="empty"></div>
 <span><a title="主页" href="/">home</a></span>
 <span><a title="存档" href="/archive">archive</a></span>
 <span><a title="标签" href="/tags">tags</a></span>
@@ -49,7 +49,7 @@ article a:hover{color:#333333;text-decoration:underline;}
 <% } else { %>
   <span><a title="登录" href="/login">login</a></span>
 <% } %>
-<span><form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form></span>
+<form action="/search" method="GET" ><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
 </nav>
 
 <article>
