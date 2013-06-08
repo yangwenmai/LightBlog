@@ -5,6 +5,9 @@ LightBlog
 
 Live Demo上线，地址：http://code5light.com:8888/  
 
+本程序最新版本代码已通过W3C Validator Check！  
+本程序最新版本CSS已通过W3C CSS校验器测试！[![CSS](http://jigsaw.w3.org/css-validator/images/vcss)](http://jigsaw.w3.org/css-validator/check/referer)
+
 ##什么是LightBlog
 LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法的轻量级博客系统    
 源代码基于nswbmw的[N-Blog](https://github.com/nswbmw/N-blog)，使用bootstrap改进了前端，支持强制验证的数据库连接，减少了核心代码定义的信息，改入settings.js定义，更加便于使用
