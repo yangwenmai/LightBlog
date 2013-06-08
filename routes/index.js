@@ -204,10 +204,10 @@ module.exports = function(app){
         return res.redirect('/');
       }
       res.render('tag',{
-        title: 'TAG:'+ req.params.tag + ' | ' + app.get('sitename'),
+        title: '搜索:'+ req.params.tag + ' | ' + app.get('sitename'),
         sitename: app.get('sitename'),
         sitedescription: app.get('sitedescription'),      
-        pagename: 'TAG:'+ req.params.tag,
+        pagename: '标签:'+ req.params.tag,
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),
@@ -235,8 +235,8 @@ module.exports = function(app){
         return res.redirect('/');
       }
       res.render('search',{
-        title: "SEARCH:"+ req.query.keyword + ' | ' + app.get('sitename'),
-        pagename: "SEARCH:"+ req.query.keyword,
+        title: "搜索:"+ req.query.keyword + ' | ' + app.get('sitename'),
+        pagename: "搜索:"+ req.query.keyword,
         sitename: app.get('sitename'),
         sitedescription: app.get('sitedescription'),
         posts: posts,
@@ -262,10 +262,10 @@ module.exports = function(app){
           return res.redirect('/');
         } 
         res.render('user',{
-          title: user.name + ' | ' + app.get('sitename'),
+          title: "用户:" + user.name + ' | ' + app.get('sitename'),
           sitename: app.get('sitename'),
           sitedescription: app.get('sitedescription'),
-          pagename: user.name,
+          pagename: "用户:" + user.name,
           posts: posts,
           page: page,
           postsLen: posts.length,
