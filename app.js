@@ -32,13 +32,12 @@ app.use(express.session({
   cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
   store: new MongoStore({
     db: settings.db,
-    /* username: settings.username,
-    password: settings.password */
-    //如果你使用了"--auth"参数启动mongodb，请删除"/**/"
+    username: settings.username,
+    password: settings.password
   })
 }));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
-app.use(express.static(__dirname, '/public'));
 
 // development only
 if ('development' == app.get('env')) {
