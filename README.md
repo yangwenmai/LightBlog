@@ -6,7 +6,8 @@ LightBlog
 Live Demo上线，地址：http://code5light.com:8888/  
 
 本程序最新版本代码已通过W3C Validator Check！  
-本程序最新版本CSS已通过W3C CSS校验器测试！![CSS](http://jigsaw.w3.org/css-validator/images/vcss)
+本程序最新版本CSS已通过W3C CSS校验器测试！![CSS](http://jigsaw.w3.org/css-validator/images/vcss)  
+本程序入驻CodePlex，更新会较慢于github：http://lightblog.codeplex.com
 
 ##什么是LightBlog
 LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法的轻量级博客系统    
@@ -44,8 +45,14 @@ LightBlog便会开始运行在你设定的端口上（默认8888）
 ##TO-DO List
 添加修改文章和删除文章的功能
 
+##更新日志
+V1.0.5：删除了搜索页面由于以前使用其他方法实现页面标题更新之后没有删除的残留代码  
+V1.0.4：删除了header.ejs里的CSS代码，修改为引用CSS文件，主页加入开发中的文章管理功能（暂不能使用）  
+V1.0.3：修改了app.js，恢复public文件夹的功能，把CSS写入文件  
+V1.0.2：修改了评论部分书写不正确的注释，把搜索和用户页面标题修改为中文  
+V1.0.1：修改部分页面使代码通过W3C Validator Check，扩充了package.json的内容  
+V1.0.0：基础文件  
+
 ##开发进度
-修改了部分不标准的前端代码  
-关于一个问题的说明：为什么我不使用mongoose  
-1、用这种概念复杂的包开发恰恰会使人看不懂代码，mongoose引入的概念实在是太多，这也从一个方面体现了他的弊端：完全不适合初学者，这个包应该是为大型app准备的  
-2、没有人会蛋疼的天天拿ab测并发，我在本地刷新也没跳出来多少500，这只是个小博客，没必要纠结并发的问题
+开始文章管理功能的开发  
+暂时停止前端开发
