@@ -28,13 +28,12 @@ LightBlog是一个基于Node.js，Express框架，Mongodb的支持markdown语法
 
 npm会自动下载需要的依赖  
 待安装完成之后，修改目录下的settings.js里的相关信息  
-（！注意！：如果你的mongodb使用了--auth参数进行启动，请删除models里的comment.js、db.js、user.js、post.js，并将剩余的文件的文件名去掉.safe）  
-（！注意！：如果你的mongodb使用了--auth参数进行启动，请确保settings.js里的数据库用户名和密码被正确配置【在设置的数据库内建立的用户而不是在admin内建立的用户】）  
+（！注意！：如果你的mongodb使用了--auth参数进行启动，请确保settings.js里的usepwd项为true（默认为false）并且数据库用户名和密码被正确配置【在设置的数据库内建立的用户而不是在admin内建立的用户】）  
 修改完成后，执行  
 
     node app.js
 
-LightBlog便会开始运行在你设定的端口上（默认8888）  
+LightBlog便会开始运行在你设定的端口上（默认1337）  
 进入localhost:[你的端口号]/install添加管理员用户  
 添加完成之后删除views下的install.ejs和routes下的index.js里的安装部分  
 开始博客之旅！
@@ -46,6 +45,7 @@ LightBlog便会开始运行在你设定的端口上（默认8888）
 添加修改文章和删除文章的功能
 
 ##更新日志
+V1.0.6：增加了是否开启使用用户名和密码登录数据库的判断，从此不需要修改文件名，直接修改settings.js的usepwd项为true即可
 V1.0.5：删除了搜索页面由于以前使用其他方法实现页面标题更新之后没有删除的残留代码  
 V1.0.4：删除了header.ejs里的CSS代码，修改为引用CSS文件，主页加入开发中的文章管理功能（暂不能使用）  
 V1.0.3：修改了app.js，恢复public文件夹的功能，把CSS写入文件  
