@@ -26,7 +26,8 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
-app.use(express.session({
+if(settings.usepwd = "true") {
+  app.use(express.session({
   secret: settings.cookieSecret,
   key: settings.db,
   cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
@@ -35,6 +36,15 @@ app.use(express.session({
     username: settings.username,
     password: settings.password
   })
+}));
+}
+app.use(express.session({
+secret: settings.cookieSecret,
+key: settings.db,
+cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
+store: new MongoStore({
+  db: settings.db,
+})
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
