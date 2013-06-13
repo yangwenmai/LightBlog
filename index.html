@@ -67,8 +67,7 @@
 
 <p>npm会自动下载需要的依赖<br>
 待安装完成之后，修改目录下的settings.js里的相关信息<br>
-（！注意！：如果你的mongodb使用了--auth参数进行启动，请删除models里的comment.js、db.js、user.js、post.js，并将剩余的文件的文件名去掉.safe）<br>
-（！注意！：如果你的mongodb使用了--auth参数进行启动，请确保settings.js里的数据库用户名和密码被正确配置【在设置的数据库内建立的用户而不是在admin内建立的用户】）<br>
+（！注意！：如果你的mongodb使用了--auth参数进行启动，请确保settings.js里的usepwd项为true（默认为false）并且数据库用户名和密码被正确配置【在设置的数据库内建立的用户而不是在admin内建立的用户】）<br>
 修改完成后，执行  </p>
 
 <pre><code>node app.js
