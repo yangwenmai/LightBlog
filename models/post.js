@@ -54,6 +54,7 @@ Post.prototype.save = function(callback) {//存储一篇文章及其相关信息
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
   //打开数据库
@@ -110,7 +111,8 @@ Post.getTen = function(name, page, callback) {//一次获取十篇文章
         });
       });
     });
-  };
+    return;
+  }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
   //打开数据库
     if (err) {
@@ -176,6 +178,7 @@ Post.getOne = function(name, day, title, callback) {//获取一篇文章
         collection.update({"name":name,"time.day":day,"title":title},{$inc:{"pv":1}});
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
   //打开数据库
@@ -232,6 +235,7 @@ Post.getArchive = function(callback) {//返回所有文章
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     if (err) {
@@ -277,6 +281,7 @@ Post.getTags = function(callback) {//返回所有标签
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     if (err) {
@@ -322,6 +327,7 @@ Post.getTag = function(tag, callback) {//返回含有特定标签的所有文章
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     if (err) {
@@ -369,6 +375,7 @@ Post.search = function(keyword, callback) {//返回通过标题关键字查询�
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     if (err) {

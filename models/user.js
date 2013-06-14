@@ -35,6 +35,7 @@ User.prototype.save = function(callback) {//存储用户信息
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
   //打开数据库
@@ -83,6 +84,7 @@ User.get = function(name, callback){//读取用户信息
         });
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
   //打开数据库

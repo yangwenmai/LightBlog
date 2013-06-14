@@ -36,6 +36,7 @@ Comment.prototype.save = function(callback) {
         });   
       });
     });
+    return;
   }
   MongoClient.connect("mongodb://" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     if (err) {
