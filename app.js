@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -37,6 +36,7 @@ if(settings.usepwd = "true") {
     password: settings.password
   })
 }));
+  return;
 }
 app.use(express.session({
 secret: settings.cookieSecret,
