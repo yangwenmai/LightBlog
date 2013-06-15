@@ -12,6 +12,7 @@ var express = require('express')
   , flash = require('connect-flash');
 
 var app = express();
+var usepwd = "0";
 
 // all environments
 app.set('appname', 'LightBlog');
@@ -36,16 +37,19 @@ if(settings.usepwd = "true") {
     username: settings.username,
     password: settings.password
   })
-}));
+  }));
+  usepwd = "1"
 }
-app.use(express.session({
-secret: settings.cookieSecret,
-key: settings.db,
-cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
-store: new MongoStore({
-  db: settings.db,
-})
-}));
+if(usepwd != "1") {
+  app.use(express.session({
+  secret: settings.cookieSecret,
+  key: settings.db,
+  cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
+  store: new MongoStore({
+    db: settings.db,
+  })
+  }));
+}
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
