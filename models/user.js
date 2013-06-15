@@ -16,7 +16,7 @@ User.prototype.save = function(callback) {//存储用户信息
       password: this.password,
       email: this.email
   };
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     //打开数据库
       if(err){
@@ -58,7 +58,7 @@ User.prototype.save = function(callback) {//存储用户信息
 };
 
 User.get = function(name, callback){//读取用户信息
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     //打开数据库
       if(err){
