@@ -25,7 +25,7 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
-if(settings.usepwd = "true") {
+if(settings.usepwd == "true") {
   app.use(express.session({
   secret: settings.cookieSecret,
   key: settings.db,
