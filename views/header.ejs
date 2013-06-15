@@ -4,15 +4,7 @@
 <meta charset="UTF-8" />
 <title><%= title %></title>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-<!--[if lte IE 8]>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<![endif]-->
-<!--[if gte IE 9]>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<![endif]-->
-<!--[if !IE]> -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<!-- <![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -32,7 +24,7 @@
 <% } else { %>
   <span><a title="登录" href="/login">login</a></span>
 <% } %>
-<form action="/search" method="GET" ><input type="text" name="keyword" placeholder="搜索" class="search" /></form>
+<form action="/search" method="GET" ><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
 </nav>
 
 <article>
