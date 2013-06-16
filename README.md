@@ -45,7 +45,10 @@ LightBlog便会开始运行在你设定的端口上（默认1337）
 添加修改文章和删除文章的功能
 
 ##更新日志
-V1.0.8：app.js代码追加return
+V1.0.11：来自yangwenmai，对于comment.js的修正【本版本为pull requests中Merge而来】
+V1.0.10：来自yangwenmai，对于post.js的修正【本版本为pull requests中Merge而来】
+V1.0.9：由于笔误的原因，所有关于数据库连接判断的相等写成了赋值，本版本修正user.js。【感谢yangwenmai的纠正，本版本为pull requests中Merge而来】
+V1.0.8：app.js代码追加return  
 V1.0.7：修改了判断语句结尾，全部return跳出下面的代码避免重复连接的问题  
 V1.0.6：增加了是否开启使用用户名和密码登录数据库的判断，从此不需要修改文件名，直接修改settings.js的usepwd项为true即可  
 V1.0.5：删除了搜索页面由于以前使用其他方法实现页面标题更新之后没有删除的残留代码  
