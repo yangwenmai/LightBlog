@@ -3,7 +3,7 @@ LightBlog
 项目构建状态：[![Build Status](https://travis-ci.org/sanddudu/LightBlog.png?branch=master)](https://travis-ci.org/sanddudu/LightBlog)  
 项目依赖状态：[![依赖模块状态](https://david-dm.org/sanddudu/LightBlog.png)](http://david-dm.org/sanddudu/LightBlog)
 
-Live Demo上线，地址：http://code5light.com:8888/  
+Live Demo上线，地址：http://code5light.com:8888/ （已失效） 
 
 本程序最新版本代码已通过W3C Validator Check！  
 本程序最新版本CSS已通过W3C CSS校验器测试！![CSS](http://jigsaw.w3.org/css-validator/images/vcss)  
