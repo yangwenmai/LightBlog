@@ -33,7 +33,7 @@ Post.prototype.save = function(callback) {//存储一篇文章及其相关信息
       comments: [],
       pv: 0
   };
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     //打开数据库
       if (err) {
@@ -79,7 +79,7 @@ Post.prototype.save = function(callback) {//存储一篇文章及其相关信息
 };
 
 Post.getTen = function(name, page, callback) {//一次获取十篇文章
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     //打开数据库
       if (err) {
@@ -147,7 +147,7 @@ Post.getTen = function(name, page, callback) {//一次获取十篇文章
 };
 
 Post.getOne = function(name, day, title, callback) {//获取一篇文章
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
     //打开数据库
       if (err) {
@@ -213,7 +213,7 @@ Post.getOne = function(name, day, title, callback) {//获取一篇文章
 };
 
 Post.getArchive = function(callback) {//返回所有文章
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
       if (err) {
         return callback(err);
@@ -261,7 +261,7 @@ Post.getArchive = function(callback) {//返回所有文章
 };
 
 Post.getTags = function(callback) {//返回所有标签
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
       if (err) {
         return callback(err);
@@ -305,7 +305,7 @@ Post.getTags = function(callback) {//返回所有标签
 };
 
 Post.getTag = function(tag, callback) {//返回含有特定标签的所有文章
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
       if (err) {
         return callback(err);
@@ -353,7 +353,7 @@ Post.getTag = function(tag, callback) {//返回含有特定标签的所有文章
 };
 
 Post.search = function(keyword, callback) {//返回通过标题关键字查询的所有文章
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
       if (err) {
         return callback(err);
