@@ -15,7 +15,7 @@ Comment.prototype.save = function(callback) {
       day = this.day,
       title = this.title,
       comment = this.comment;
-  if (settings.usepwd = "true") {
+  if (settings.usepwd == "true") {
     MongoClient.connect("mongodb://" + settings.username + ":" + settings.password + "@" + settings.host + ":" + settings.port + "/" + settings.db + "?safe=true", function(err, db) {
       if (err) {
         return callback(err);
